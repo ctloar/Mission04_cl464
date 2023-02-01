@@ -57,8 +57,9 @@ $("#btnClick").click(function () {
         letter = 'E'
     }
 
-    // this line won't work using the jquery syntax for some reason
+    // this line wouldn't work using the jquery syntax for some reason
     // sends the letter grade to the html element with id 'letter'
-    document.getElementById("letter").innerHTML = letter;
+    // document.getElementById("letter").innerHTML = letter;
+    $("#letter").html(letter);
     
 })
