@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <!-- text that displays on the browser tab -->
+    <title>@ViewData["Title"]</title>
+
+    <!-- the links below define the files in my directory that I use for styling (css, bootstrap) -->
+    <!-- the icon link sets the favicon, as seen in the browser tab -->
+    <link rel="icon" type="image/x-icon" href="~/img/saluting-face_1fae1.png">
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <a asp-controller="M5" asp-action="Index">Home</a>
+        <a asp-controller="M5" asp-action="Calculate">Grade Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/jquery-3.6.3.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/gradeCalc.js"></script>
+
+</body>
+
+</html>

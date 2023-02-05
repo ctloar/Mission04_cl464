@@ -17,7 +17,7 @@ $("#btnClick").click(function () {
     master = (assignment / 2) + (project / 10) + (quiz / 10) + (midterm / 10) + (final / 10) + (intex / 10)
 
     // pop-up alert on the browser displaying the final percentage
-    alert("Final grade percentage: " + master + "%");
+    // alert("Final grade percentage: " + master + "%");
 
     // logic determining the letter grade associated with each percentage range
     if (master >= 94) {
@@ -57,9 +57,9 @@ $("#btnClick").click(function () {
         letter = 'E'
     }
 
-    // this line wouldn't work using the jquery syntax for some reason
     // sends the letter grade to the html element with id 'letter'
     // document.getElementById("letter").innerHTML = letter;
     $("#letter").html(letter);
+    alert(letter);
     
 })

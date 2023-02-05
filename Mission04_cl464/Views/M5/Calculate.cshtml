@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CalculateModel;
+
+<!-- form that takes percentages as values, which are used in the js file to determine final grade -->
+<h3>Grade calculator:</h3>
+<form method="post">
+    <label>Assignments:</label>
+    <input id="assignment" asp-for="assignment"/><br />
+    <label>Projects:</label>
+    <input id="project" asp-for="project"/><br />
+    <label>Quizzes:</label>
+    <input id="quiz" asp-for="quiz"/><br />
+    <label>Midterm:</label>
+    <input id="midterm" asp-for="midterm"/><br />
+    <label>Final Exam:</label>
+    <input id="final" asp-for="final"/><br />
+    <label>INTEX:</label>
+    <input id="intex" asp-for="intex"/><br />
+    <input id="btnClick" class="btn-calc" type="submit" value="Calculate" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+<br />
+
+<!-- box to display the letter grade calculated from the form -->
+<div class="letter-grade">
+    <h3 class="letter-inner">Final letter grade: <span class="letter" id="letter"></span></h3>
+</div>
+
+<!-- the javascript I use in the program (jquery included) -->
+<script src="~/js/gradeCalc.js"></script>
