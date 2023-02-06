@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Mission04_cl464.Models
 {
+    // Model establishing all the data types that will be used in the form
+    // the validation requires the field to have values and to be an int within a range of 0-100
     public class CalculateModel
     {
         [Required]

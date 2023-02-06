@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<!-- shared html elements across the different views -->
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -16,15 +18,18 @@
 
 <body>
 
+    <!-- shared navigation -->
     <nav>
         <a asp-controller="M5" asp-action="Index">Home</a>
         <a asp-controller="M5" asp-action="Calculate">Grade Calculator</a>
     </nav>
 
+    <!-- Razor code that renders portion of the other views -->
     <div>
         @RenderBody()
     </div>
 
+    <!-- script tags shared across the views -->
     <script src="~/lib/jquery/jquery-3.6.3.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/js/gradeCalc.js"></script>
